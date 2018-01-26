@@ -1,0 +1,36 @@
+﻿  main.cpp
+  soil.lib(SOIL.obj) : znaleziono moduł .netmodule MSIL lub moduł skompilowany z opcją /GL; konsolidowanie zostanie rozpoczęte ponownie z opcją /LTCG; dodaj opcję /LTCG do wiersza polecenia konsolidacji w celu podwyższenia wydajności konsolidatora
+LINK : warning LNK4075: zignorowano opcjŕ ä/INCREMENTALö z powodu okreťlenia opcji ä/LTCGö
+  Trwa generowanie kodu
+  Zako˝czono generowanie kodu
+Model.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewBindBuffer zosta│ zaimportowany
+Model.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewBufferData zosta│ zaimportowany
+Model.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewGenBuffers zosta│ zaimportowany
+Model.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewEnableVertexAttribArray zosta│ zaimportowany
+Model.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewVertexAttribPointer zosta│ zaimportowany
+Model.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewBindVertexArray zosta│ zaimportowany
+Renderer.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewBindVertexArray zosta│ zaimportowany
+Model.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewGenVertexArrays zosta│ zaimportowany
+Renderer.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewActiveTexture zosta│ zaimportowany
+Texture.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewActiveTexture zosta│ zaimportowany
+Renderer.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewGetUniformLocation zosta│ zaimportowany
+Renderer.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewUniform1f zosta│ zaimportowany
+Renderer.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewUniform1i zosta│ zaimportowany
+Renderer.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewUniform2fv zosta│ zaimportowany
+Renderer.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewUniform3fv zosta│ zaimportowany
+Renderer.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewUniform4fv zosta│ zaimportowany
+Renderer.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewUniformMatrix4fv zosta│ zaimportowany
+ShProgram.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewAttachShader zosta│ zaimportowany
+ShProgram.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewCompileShader zosta│ zaimportowany
+ShProgram.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewCreateProgram zosta│ zaimportowany
+ShProgram.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewCreateShader zosta│ zaimportowany
+ShProgram.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewDeleteShader zosta│ zaimportowany
+ShProgram.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewGetProgramInfoLog zosta│ zaimportowany
+ShProgram.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewGetProgramiv zosta│ zaimportowany
+ShProgram.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewGetShaderInfoLog zosta│ zaimportowany
+ShProgram.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewGetShaderiv zosta│ zaimportowany
+ShProgram.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewLinkProgram zosta│ zaimportowany
+ShProgram.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewShaderSource zosta│ zaimportowany
+ShProgram.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewUseProgram zosta│ zaimportowany
+Texture.obj : warning LNK4049: lokalnie zdefiniowany symbol ___glewGenerateMipmap zosta│ zaimportowany
+  ConsoleApplication1.vcxproj -> C:\Users\Kasia\Desktop\szkolne\studia\sem 5\GKOM\dobry-projekt\gkom-gl\Debug\Kiwak.exe
