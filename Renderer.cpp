@@ -46,7 +46,8 @@ void Renderer::setProjectionMatrix(const glm::mat4& mtx)
 void Renderer::setObjectMaterial(const Material * material)
 {
 	GLuint programID = shader.getProgramID();
-	if (material->getTexture()) {
+	if (material->getTexture())
+	{
 		glEnable(GL_TEXTURE_2D);
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, material->getTexture()->getId());
@@ -54,10 +55,11 @@ void Renderer::setObjectMaterial(const Material * material)
 		glUniform1i(glGetUniformLocation(programID, "iftexture"), GL_TRUE);
 
 		glm::vec2 tex_scale = material->getTextureScale();
-		float tex_scale_a[2] = { tex_scale.x, tex_scale.y };
-		glUniform2fv(glGetUniformLocation(programID, "textureScale"), 1, tex_scale_a);
+		glUniform2fv(glGetUniformLocation(programID, "textureScale"), 1, glm::value_ptr(tex_scale));
 	}
-	else {
+
+	else
+	{
 		glUniform1i(glGetUniformLocation(programID, "iftexture"), GL_FALSE);
 	}
 

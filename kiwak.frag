@@ -24,10 +24,12 @@ uniform float specularLevel;
 
 void main()
 {
-	if (iftexture) {
+	if (iftexture)
+	{
 		color = texture(Texture0, TexCoord * textureScale);
 	}
-	else {
+	else
+	{
 		color = vec4(1.0f, 1.0f, 1.0f, 1.0f);
 	}
 	float cosTheta = clamp( dot(norm_v, light_v), 0, 1); 

@@ -9,7 +9,6 @@
 
 class Texture
 {
-	GLuint id;
 public:
 	Texture();
 	Texture(const char* path);
@@ -17,5 +16,8 @@ public:
 
 	GLuint load(const char* path);
 	GLuint getId() const;
+
+private:
+	GLuint id;
 };
 

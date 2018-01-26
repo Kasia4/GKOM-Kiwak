@@ -1,4 +1,6 @@
 ﻿  main.cpp
+c:\users\kasia\downloads\consoleapplication1.r\consoleapplication1\main.cpp(256): warning C4244: "inicjowanie": konwersja z "double" do "GLfloat", możliwa utrata danych
+c:\users\kasia\downloads\consoleapplication1.r\consoleapplication1\main.cpp(181): warning C4101: "active": lokalna zmienna, do której nie istnieje odwołanie
   soil.lib(SOIL.obj) : znaleziono moduł .netmodule MSIL lub moduł skompilowany z opcją /GL; konsolidowanie zostanie rozpoczęte ponownie z opcją /LTCG; dodaj opcję /LTCG do wiersza polecenia konsolidacji w celu podwyższenia wydajności konsolidatora
 LINK : warning LNK4075: zignorowano opcjŕ ä/INCREMENTALö z powodu okreťlenia opcji ä/LTCGö
   Trwa generowanie kodu

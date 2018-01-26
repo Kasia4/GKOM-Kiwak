@@ -12,8 +12,6 @@
 
 class ConvexShape
 {
-private:
-	std::vector<glm::vec2> vertices;
 public:
 	ConvexShape();
 	ConvexShape(const std::vector<glm::vec2>& vert_list);
@@ -27,6 +25,8 @@ public:
 	GLuint getVerticesCount() const;
 	glm::vec2 getCenter() const;
 
+private:
+	std::vector<glm::vec2> vertices;
 };
 
 

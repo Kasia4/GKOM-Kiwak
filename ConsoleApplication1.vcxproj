@@ -160,7 +160,7 @@
     <ClCompile Include="FileModel.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Light.cpp" />
-    <ClCompile Include="LoatheModel.cpp" />
+    <ClCompile Include="LatheModel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="Model.cpp" />
@@ -186,7 +186,7 @@
     <ClInclude Include="FileModel.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="Light.h" />
-    <ClInclude Include="LoatheModel.h" />
+    <ClInclude Include="LatheModel.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="PrismModel.h" />

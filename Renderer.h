@@ -16,15 +16,7 @@
 
 class Renderer
 {
-
-private:
-	ShProgram& shader;
-	GLuint transformLoc;
-	GLuint viewLoc;
-	GLuint projLoc;
-
 public:
-
 	Renderer(ShProgram& shader);
 	~Renderer();
 
@@ -35,5 +27,11 @@ public:
 	void setObjectMaterial(const Material* material);
 	void setLight(const Light& light);
 	void setEnvironment(const Environment& environment);
+
+private:
+	ShProgram & shader;
+	GLuint transformLoc;
+	GLuint viewLoc;
+	GLuint projLoc;
 };
 

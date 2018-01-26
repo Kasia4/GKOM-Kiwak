@@ -5,14 +5,8 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "SceneObject.h"
 
-class Camera :
-	public SceneObject
+class Camera: public SceneObject
 {
-private:
-	glm::mat4 projection;
-
-	glm::mat4 camRot;
-	glm::vec3 camPos;
 
 public:
 	Camera(SceneObject* parent = nullptr);
@@ -20,5 +14,12 @@ public:
 
 	void setProjection(const glm::mat4& mtx);
 	glm::mat4 getProjection() const;
+
+private:
+	glm::mat4 projection;
+
+	glm::mat4 camRot;
+	glm::vec3 camPos;
+
 };
 

@@ -48,7 +48,8 @@ void PrismModel::generate()
 	glm::vec3 next = v2ToV3(shape.getVertex(1) * radius1) ;
 	glm::vec3 next_u = v2ToV3(shape.getVertex(1) * radius2, height)  + base_translation;
 
-	for (GLuint i = 0; i < sh_v; ++i) {
+	for (GLuint i = 0; i < sh_v; ++i)
+	{
 		seg_len = glm::length(curr - next);
 		normal = glm::normalize(glm::cross(curr_u - curr, next-curr));
 		setVertex(4 * i, curr, normal, glm::vec2(tex_pos, 0.0f));
@@ -69,6 +70,7 @@ void PrismModel::generate()
 		next = v2ToV3(shape.getVertex((i + 2) % sh_v) * radius1);
 		next_u = v2ToV3(shape.getVertex((i + 2) % sh_v) * radius2, height) + base_translation;
 	}
+
 	setVertex(6 * sh_v, v2ToV3(center), down, center);
 	setVertex(6 * sh_v + 1, v2ToV3(center_u, height) + base_translation, up, center_u+glm::vec2(base_translation.x, base_translation.z));
 	

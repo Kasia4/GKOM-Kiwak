@@ -6,15 +6,10 @@
 
 class Material
 {
-
-private:
-	const Texture* texture;
-	glm::vec2 texture_scale;
-	GLfloat specular_level;
-	GLfloat glossiness;
-	glm::vec4 color;
-
 public:
+	Material();
+	~Material();
+
 	void setTexture(const Texture* tex);
 	void setTextureScale(const glm::vec2& scale);
 	void setSpecularLevel(GLfloat value);
@@ -28,8 +23,11 @@ public:
 	GLfloat getGlossiness() const;
 	glm::vec4 getColor() const;
 
-
-	Material();
-	~Material();
+private:
+	const Texture* texture;
+	glm::vec2 texture_scale;
+	GLfloat specular_level;
+	GLfloat glossiness;
+	glm::vec4 color;
 };
 

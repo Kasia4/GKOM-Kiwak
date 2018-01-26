@@ -16,13 +16,15 @@ struct ObjectBehaviour {
 
 class InputManager
 {
-private:
-	std::map<GLuint, ObjectBehaviour> bindings;
 public:
+	InputManager();
+	~InputManager();
+
 	void bind(GLuint key_code, SceneObject* object, ObjectBehaviourFunc func);
 	void unbind(GLuint key_code);
 	void behave(GLuint key_code);
-	InputManager();
-	~InputManager();
+
+private:
+	std::map<GLuint, ObjectBehaviour> bindings;
 };
 

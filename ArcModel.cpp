@@ -1,6 +1,10 @@
 #include "ArcModel.h"
 
 
+ArcModel::ArcModel()
+{
+}
+
 ArcModel::ArcModel(GLfloat radius1, GLfloat radius2, GLfloat height, GLfloat angle, GLuint segments, const glm::vec3& v)
 	: Model(v)
 	, inner_radius(radius1)
@@ -10,10 +14,6 @@ ArcModel::ArcModel(GLfloat radius1, GLfloat radius2, GLfloat height, GLfloat ang
 	, segments(segments)
 {
 	generate();
-}
-
-ArcModel::ArcModel()
-{
 }
 
 
@@ -29,7 +29,8 @@ void ArcModel::generate()
 	setIndices(i_count);
 	GLfloat seg_angle = angle / segments;
 	glm::vec2 *base_vertices = new glm::vec2[2 * segments + 2];
-	for (GLuint i = 0; i <= segments; ++i) {
+	for (GLuint i = 0; i <= segments; ++i)
+	{
 		glm::vec2 norm_vec = glm::vec2(cos(i*seg_angle), sin(i*seg_angle));
 		base_vertices[2 * i] = norm_vec * inner_radius;
 		base_vertices[2 * i + 1] = norm_vec * outer_radius;;
@@ -39,7 +40,8 @@ void ArcModel::generate()
 	glm::vec3 up(0.0f, 1.0f, 0.0f);
 	GLfloat in_seg_len = glm::length(base_vertices[0] - base_vertices[2]);
 	GLfloat out_seg_len = glm::length(base_vertices[1] - base_vertices[3]);
-	for (GLuint i = 0; i <= segments; ++i) {
+	for (GLuint i = 0; i <= segments; ++i)
+	{
 		glm::vec3 normal = glm::normalize(v2ToV3(base_vertices[2 * i]));
 		glm::vec3 neg_normal = glm::vec3(0, 0, 0) - normal;
 		setVertex(8 * i,	 v2ToV3(base_vertices[2 * i]),				neg_normal, glm::vec2(in_seg_len*i, 0.0f));
@@ -51,7 +53,8 @@ void ArcModel::generate()
 		setVertex(8 * i + 6, v2ToV3(base_vertices[2 * i]),				down,		base_vertices[2 * i]);
 		setVertex(8 * i + 7, v2ToV3(base_vertices[2 * i + 1]),			down,		base_vertices[2 * i + 1]);
 	}
-	for (GLuint i = 0; i < segments; ++i) {
+	for (GLuint i = 0; i < segments; ++i)
+	{
 		setIndex(8 * i,		glm::uvec3(8 * i,	  8 * i + 1,		8 * (i + 1) + 1));
 		setIndex(8 * i + 1, glm::uvec3(8 * i,	  8 * (i + 1),		8 * (i + 1) + 1));
 		setIndex(8 * i + 2, glm::uvec3(8 * i + 2, 8 * i + 3,		8 * (i + 1) + 3));

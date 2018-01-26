@@ -17,27 +17,6 @@ typedef void(*Animation)(SceneObject*);
 
 class SceneObject
 {
-private:
-
-	glm::mat4 position;
-	glm::mat4 orientation;
-	glm::vec3 base_rotations;
-	glm::mat4 scale;
-
-	glm::mat4 local_trans;
-	glm::mat4 global_trans;
-
-	glm::vec3 pivot;
-
-	SceneObject* parent;
-	std::list<SceneObject*> children;
-
-	Animation animation;
-	GLfloat *timer;
-
-	void updateTrans();
-
-	void rotate(GLfloat angle, glm::vec3 & axis, glm::vec3 & around);
 public:
 	SceneObject(SceneObject* parent = nullptr);
 	~SceneObject();
@@ -88,4 +67,26 @@ public:
 	GLfloat getTime() const;
 
 	SceneObject* getParent() const;
+
+private:
+
+	glm::mat4 position;
+	glm::mat4 orientation;
+	glm::vec3 base_rotations;
+	glm::mat4 scale;
+
+	glm::mat4 local_trans;
+	glm::mat4 global_trans;
+
+	glm::vec3 pivot;
+
+	SceneObject* parent;
+	std::list<SceneObject*> children;
+
+	Animation animation;
+	GLfloat *timer;
+
+	void updateTrans();
+
+	void rotate(GLfloat angle, glm::vec3 & axis, glm::vec3 & around);
 };

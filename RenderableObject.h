@@ -15,18 +15,9 @@
 #include "Material.h"
 
 
-class RenderableObject : public SceneObject
+class RenderableObject: public SceneObject
 {
-
-private:
-	
-	const Model* model;
-	const Material* material;
-	Renderer& renderer;
-	
-
 public:
-
 	RenderableObject(Renderer& renderer, SceneObject* parent = nullptr);
 	RenderableObject(Renderer& renderer, Model* model, Material* material, SceneObject* parent = nullptr);
 
@@ -38,5 +29,10 @@ public:
 	
 	void setMaterial(const Material* mater);
 	const Material* getMaterial() const;
+
+private:
+	const Model* model;
+	const Material* material;
+	Renderer& renderer;
 };
 

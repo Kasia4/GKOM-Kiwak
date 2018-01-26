@@ -31,7 +31,9 @@ void PyramidModel::generate()
 	
 	glm::vec3 curr = v2ToV3(shape.getVertex(0));
 	glm::vec3 next = v2ToV3(shape.getVertex(1));
-	for (GLuint i = 0; i < sh_v; ++i) {
+
+	for (GLuint i = 0; i < sh_v; ++i)
+	{
 		seg_len = glm::length(curr - next);
 		side_h = glm::length(glm::cross(tip - curr, tip - next)) / seg_len;
 		normal = glm::normalize(glm::cross(next - tip,curr-tip));
@@ -49,6 +51,7 @@ void PyramidModel::generate()
 		curr = next;
 		next = v2ToV3(shape.getVertex((i + 2) % sh_v));
 	}
+
 	setVertex(4 * sh_v, v2ToV3(center), down, center);
 	setBuffers();
 }

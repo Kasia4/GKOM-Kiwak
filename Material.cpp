@@ -1,5 +1,18 @@
 #include "Material.h"
 
+Material::Material()
+	:texture_scale(glm::vec2(1.0f, 1.0f))
+	, specular_level(0.0f)
+	, glossiness(1)
+	, color(glm::vec4(1.0f, 1.0f, 1.0f, 1.0f))
+{
+
+}
+
+Material::~Material()
+{
+}
+
 
 void Material::setTexture(const Texture * tex)
 {
@@ -51,16 +64,3 @@ glm::vec4 Material::getColor() const
 	return color;
 }
 
-Material::Material()
-	:texture_scale(glm::vec2(1.0f, 1.0f))
-	, specular_level(0.0f)
-	, glossiness(1)
-	, color(glm::vec4(1.0f, 1.0f, 1.0f, 1.0f))
-{
-
-}
-
-
-Material::~Material()
-{
-}

@@ -1,10 +1,9 @@
 #pragma once
 class ShProgram
 {
-private:
-	GLuint program_id;
 public:
 	ShProgram(const GLchar* vertexPath, const GLchar* fragmentPath);
+	~ShProgram();
 
 	void Use() const;
 
@@ -12,6 +11,7 @@ public:
 	{
 		return program_id;
 	}
-	~ShProgram();
+private:
+	GLuint program_id;
 };
 

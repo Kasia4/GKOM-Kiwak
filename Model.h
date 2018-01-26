@@ -15,25 +15,6 @@
 
 class Model
 {
-	
-private:
-	GLfloat* vertices;
-	GLuint* indices;
-	GLuint vertices_count;
-	GLuint indices_count;
-	GLuint VBO;
-	GLuint EBO;
-	GLuint VAO;
-	glm::vec3 translation;
-
-protected:
-	void generateBuffers();
-	void setBuffers();
-	void setVertices(GLuint v_count);
-	void setIndices(GLuint i_count);
-	void setVertex(GLuint n, const glm::vec3& pos, const glm::vec3& normal, const glm::vec2& tex);
-	void setIndex(GLuint n, const glm::uvec3& triangle);
-
 public:
 	static const glm::vec3 up;
 	static const glm::vec3 down;
@@ -49,6 +30,25 @@ public:
 	glm::vec3 getTranslation() const;
 
 	void printVertices() const;
+
+protected:
+	void generateBuffers();
+	void setBuffers();
+	void setVertices(GLuint v_count);
+	void setIndices(GLuint i_count);
+	void setVertex(GLuint n, const glm::vec3& pos, const glm::vec3& normal, const glm::vec2& tex);
+	void setIndex(GLuint n, const glm::uvec3& triangle);
+
+private:
+	GLfloat * vertices;
+	GLuint* indices;
+	GLuint vertices_count;
+	GLuint indices_count;
+	GLuint VBO;
+	GLuint EBO;
+	GLuint VAO;
+	glm::vec3 translation;
+
 };
 
 glm::vec3 v2ToV3(const glm::vec2& v, GLfloat y = 0.0f);

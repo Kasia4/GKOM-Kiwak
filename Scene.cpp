@@ -1,5 +1,16 @@
 #include "Scene.h"
 
+Scene::Scene(Renderer& renderer)
+	:renderer(renderer)
+	, time(0)
+{
+
+}
+
+
+Scene::~Scene()
+{
+}
 
 RenderableObject * Scene::addObject(RenderableObject * parent)
 {
@@ -61,14 +72,3 @@ void Scene::setTimeScale(GLfloat scale)
 	time_scale = scale;
 }
 
-Scene::Scene(Renderer& renderer)
-	:renderer(renderer)
-	,time(0)
-{
-
-}
-
-
-Scene::~Scene()
-{
-}

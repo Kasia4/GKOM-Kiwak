@@ -21,7 +21,8 @@ void ConvexShapeModel::generate()
 	setVertices(v_count);
 	setIndices(i_count);
 	int i = 0;
-	for (auto curr : shape.getVertices()) {
+	for (auto curr : shape.getVertices())
+	{
 		setVertex(i, glm::vec3(curr.x, 0.0f, curr.y), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(curr.x, curr.y));
 		setIndex(i, glm::uvec3(i, (i + 1) % ov_size, ov_size));
 		++i;

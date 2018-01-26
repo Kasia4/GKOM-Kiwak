@@ -9,6 +9,15 @@ ObjectBehaviour::ObjectBehaviour(SceneObject* obj, ObjectBehaviourFunc fun)
 
 }
 
+InputManager::InputManager()
+{
+}
+
+
+InputManager::~InputManager()
+{
+}
+
 void InputManager::bind(GLuint key_code, SceneObject* object, ObjectBehaviourFunc func)
 {
 	bindings.insert(std::pair<GLuint, ObjectBehaviour>(key_code, ObjectBehaviour(object, func)));
@@ -25,11 +34,3 @@ void InputManager::behave(GLuint key_code)
 	bindings[key_code].func(bindings[key_code].object);
 }
 
-InputManager::InputManager()
-{
-}
-
-
-InputManager::~InputManager()
-{
-}

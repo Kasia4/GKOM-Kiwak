@@ -11,17 +11,10 @@
 
 class Scene
 {
-private:
-	std::list<RenderableObject*> objects;
-
-	Renderer& renderer;
-	Camera camera;
-	Light light;
-	Environment environment;
-	GLfloat time;
-	GLfloat time_scale;
-
 public:
+	Scene(Renderer& renderer);
+	~Scene();
+
 	RenderableObject* addObject(RenderableObject* parent = nullptr);
 	RenderableObject* addObject(Model* model, Material* material, RenderableObject* parent = nullptr);
 	void removeObject(SceneObject* object);
@@ -35,7 +28,14 @@ public:
 
 	void setTimeScale(GLfloat scale);
 
-	Scene(Renderer& renderer);
-	~Scene();
+private:
+	std::list<RenderableObject*> objects;
+
+	Renderer& renderer;
+	Camera camera;
+	Light light;
+	Environment environment;
+	GLfloat time;
+	GLfloat time_scale;
 };
 

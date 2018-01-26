@@ -144,7 +144,8 @@ void SceneObject::updateTrans()
 {
 	local_trans = glm::translate(position, pivot) * orientation * scale;
 	global_trans = parent ? parent->global_trans * local_trans : local_trans;
-	for (SceneObject* obj : children) {
+	for (SceneObject* obj : children)
+	{
 		obj->updateTrans();
 	}
 }
@@ -180,7 +181,8 @@ void SceneObject::removeChildren(SceneObject * child)
 
 void SceneObject::setParent(SceneObject * par)
 {
-	if (parent == par) return;
+	if (parent == par)
+		return;
 	if(parent)
 		parent->removeChildren(this);
 	parent = par;
